@@ -10,19 +10,6 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const app = express();
 
-//Create Connection
-const conn = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'crud_db'
-});
-
-//connect to database
-conn.connect((err) =>{
-  if(err) throw err;
-  console.log('Mysql Connected...');
-});
 
 //set views file
 app.set('views',path.join(__dirname,'views'));
